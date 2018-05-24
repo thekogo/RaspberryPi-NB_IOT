@@ -169,7 +169,7 @@ class NB_AIS:
         data = ""
         while True:
             msg = ser.readline().decode('utf-8').strip()
-            if msg.find(self.port) != -1:  
+            if msg.find(str(self.port)) != -1:  
                 data = msg 
                 getData = True
                 break
